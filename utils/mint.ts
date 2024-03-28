@@ -38,7 +38,7 @@ export async function balanceOf(address: string) {
   try {
     const balanceData = await publicClient.readContract({
       address: contractAddress,
-      abi: contractAbi.output.abi,
+      abi: contractAbi.abi,
       functionName: "balanceOf",
       args: [address as `0x`, 0]
     });
