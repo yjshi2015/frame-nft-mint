@@ -22,7 +22,7 @@ export async function mintNft(toAddress: string) {
     const { request }: any = await publicClient.simulateContract({
       account,
       address: contractAddress,
-      abi: contractAbi.output.abi,
+      abi: contractAbi.abi,
       functionName: "safeMint",
       args: [toAddress, `https://dweb.mypinata.cloud/ipfs/QmSYN7KT847Nado3fxFafYZgG6NXTMZwbaMvU9jhu5nPmJ`],
     });
